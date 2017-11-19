@@ -1,0 +1,36 @@
+<ion-view view-title="Portfolio">
+    <ion-nav-bar class="bar-stable headerbar">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon headerleftbtn" menu-toggle="left"></button>
+        </ion-nav-buttons>
+        <ion-nav-title class="headertitle"></ion-nav-title>
+    </ion-nav-bar>
+    <ion-content lazy-scroll class="has-footer">
+        <div class="card noBackground" ng-repeat="pofo in portfolio">
+            <div class="item item-icon-left item-divider">
+                <h2><i class="icon ion-ios-world-outline"></i>{{pofo.name}}</h2>
+                <!--<p>Bachelor of Computing and Mathematical Science</p>-->
+            </div>
+            <div class="item item-text-wrap">
+                <i class="icon ion-ios-compose-outline"></i>
+                {{pofo.description}}
+                <div class="pofolink"><i class="icon ion-ios-search"></i> Click to view website: <a href="#" ng-click="openLinkSys('http://{{pofo.web}}')">{{ pofo.web}}</a></div>
+            </div >
+            <div class="item item-text-wrap">
+                <ion-slide-box  does-continue="true" auto-play="ture" slide-interval="3000">
+                    <ion-slide ng-repeat="img in pofo.images">
+                        <div class="box blue" >
+                            <div style="background: center no-repeat; background-size: contain; width: 100%; height: 300px;" 
+                                 image-lazy-src="{{img}}" image-lazy-background-image="true" 
+                                 image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="100" 
+                                 ng-click="openModal(pofo.images, $index)"></div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+            <canvas id="radar" class="chart chart-radar" ng-init="label = pofo.labels; value = [pofo.values]" data="value" labels="label" options="options" style="padding: 10px;"></canvas> 
+            <div class="item item-divider" style="text-align: center;font-size: small;">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

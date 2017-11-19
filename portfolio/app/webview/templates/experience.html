@@ -1,0 +1,27 @@
+<ion-view view-title="Experience">
+    <ion-nav-bar class="bar-stable headerbar">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon headerleftbtn" menu-toggle="left"></button>
+        </ion-nav-buttons>
+        <ion-nav-title class="headertitle"></ion-nav-title>
+    </ion-nav-bar>
+    <ion-content class="padding-left padding-right has-footer">
+        <div class="card noBackground" ng-repeat="exp in experience">
+            <div class="item item-icon-left item-divider" >
+                <h2><i class="icon {{exp.icon}}"></i>{{exp.title}}</h2>
+                <p>{{exp.employer}}</p>
+            </div>
+            <a class="noBackground" href="#/menus/expDetail/{{exp.shortname}}">
+                <div class="item item-icon-right item-text-wrap" >
+                    <p>
+                        {{exp.description| limitTo: 200}}{{exp.description.length > 200 ? '&hellip;': ''}}
+                    </p>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </div>
+            </a>
+            <div class="item item-divider item-icon-right" style="text-align: center; font-size: small;">
+                {{exp.time}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

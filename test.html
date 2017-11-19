@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <div id="demo"></div>
+
+        <script>
+            var txt = "";
+            txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+            txt += "<p>Browser Name: " + navigator.appName + "</p>";
+            txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+            txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+            txt += "<p>Browser Language: " + navigator.language + "</p>";
+            txt += "<p>Browser Online: " + navigator.onLine + "</p>";
+            txt += "<p>Platform: " + navigator.platform + "</p>";
+            txt += "<p>oscpu " + navigator.oscpu + "</p>";
+            txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+            txt += "<p>buildID: " + navigator.buildID + "</p>";
+
+
+
+            var sBrowser, sUsrAg = navigator.userAgent;
+
+            if (sUsrAg.indexOf("Chrome") > -1) {
+                sBrowser = "Google Chrome";
+            } else if (sUsrAg.indexOf("Safari") > -1) {
+                sBrowser = "Apple Safari";
+            } else if (sUsrAg.indexOf("Opera") > -1) {
+                sBrowser = "Opera";
+            } else if (sUsrAg.indexOf("Firefox") > -1) {
+                sBrowser = "Mozilla Firefox";
+            } else if (sUsrAg.indexOf("MSIE") > -1) {
+                sBrowser = "Microsoft Internet Explorer";
+            }
+
+            txt += "<p>You are using: " + sBrowser + "</p>";
+
+
+            var guid = function () {
+
+                var nav = window.navigator;
+                var screen = window.screen;
+                var guid = nav.mimeTypes.length;
+                guid += nav.userAgent.replace(/\D+/g, '');
+                guid += nav.plugins.length;
+                guid += screen.height || '';
+                guid += screen.width || '';
+                guid += screen.pixelDepth || '';
+
+                return guid;
+            };
+
+
+            txt += "<p>GUID: " + guid() + "</p>";
+            document.getElementById("demo").innerHTML = txt;
+
+        </script>
+        <div>TODO write content</div>
+    </body>
+</html>

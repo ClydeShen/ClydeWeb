@@ -1,0 +1,108 @@
+.eachItem {
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+    /*position: relative;*/
+    width: 320px;
+    height: 225px;
+    box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+
+.eachItem .figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.eachItem .figcaption span:before {
+    content: 'by ';
+}
+
+.eachItem .figcaption a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #ed4e6e;
+    color: #fff;
+}
+
+
+/* Caption Style 3 */
+.figure {
+    overflow: hidden;
+}
+
+.figure .figureImg {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+    height: 100%;
+}
+.figure:hover .figureImg{
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+.no-touch .figure:hover .figureImg,
+.figure.cs-hover .figureImg {
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+
+.figure .figcaption {
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    background: #161F28;
+    color: #ed4e6e;
+    height: 100px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+.figure:hover .figcaption{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+    transition: transform 0.4s, opacity 0.1s;
+}
+.no-touch .figure:hover .figcaption,
+.figure.cs-hover .figcaption {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+    transition: transform 0.4s, opacity 0.1s;
+}
+
+.figure .figcaption a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.figure .figcaption a:hover, .figure .figcaption a:active{
+    text-decoration: none;
+}

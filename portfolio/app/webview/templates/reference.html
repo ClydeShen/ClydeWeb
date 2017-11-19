@@ -1,0 +1,30 @@
+<ion-view view-title="Reference">
+    <ion-nav-bar class="bar-stable headerbar">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon headerleftbtn" menu-toggle="left"></button>
+        </ion-nav-buttons>
+        <ion-nav-title class="headertitle"></ion-nav-title>
+    </ion-nav-bar>
+    <ion-content class="padding has-footer">
+        
+        <div class="row" ng-repeat="ref in reference">
+            <div class="col">
+                <div class="card noBackground">
+                    <div class="item item-icon-left item-divider">
+                        <h2><i class="icon {{ref.icon}}"></i>{{ref.title}} {{ref.fullname}}</h2>
+                        <p ng-repeat="position in ref.job">{{position}}</p>
+                    </div>
+                    <div class=" item item-icon-right item-divider">
+                        <i class="icon ion-ios-location-outline"></i>{{ref.address}}
+                    </div>
+                    <div class=" item item-icon-right item-divider">
+                        <i class="icon ion-ios-email-outline"></i>{{ref.email}}
+                    </div>
+                    <div class=" item item-icon-right item-divider">
+                        <i class="icon ion-ios-telephone-outline"></i>{{ref.phone}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

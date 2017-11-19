@@ -1,0 +1,57 @@
+<ion-view view-title="Summary">
+    <ion-nav-bar class="bar-stable headerbar">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon headerleftbtn" menu-toggle="left"></button>
+        </ion-nav-buttons>
+        <ion-nav-title class="headertitle"></ion-nav-title>
+    </ion-nav-bar>
+    <ion-content class="has-footer">
+        <div class="row">
+            <div class="col">
+                <div class="list noBackground">
+                    <div class="item item-icon-left">
+                        <p><i class="icon ion-ios-person"></i>FULL NAME: {{summary.fullname}}</p>
+                    </div>
+                    <div class="item item-icon-left">
+                        <p><i class="icon ion-ios-person-outline"></i>PREFERRED NAME: {{summary.engname}}</p>
+                    </div>
+                    <div class="item item-icon-left">
+                        <p><i class="icon ion-ios-telephone-outline"></i>MOBILE: {{summary.mobile}}</p>
+                    </div>
+                    <div class="item item-icon-left">
+                        <p><i class="icon ion-ios-email-outline"></i>EMAIL: {{summary.email}}</p>
+                    </div>
+                    <div class="item item-icon-left">
+                        <p><i class="icon ion-ios-location-outline"></i>{{summary.address}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card noBackground">
+                    <div class="item item-text-wrap">
+                        <p><i class="icon ion-quote"></i> {{summary.description}}</p>
+                    </div>
+                </div>
+                <div class="list noBackground">
+                    <div class="item item-icon-left">
+                        <a href="#" ng-click="openLinkSys('http://shenlongzhen.com')"> <i class="icon ion-ios-world-outline"></i>{{summary.web}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="list noBackground border-white">
+                    <div class="item item-icon-left item-no-border" >
+                        <i class="icon ion-stats-bars"></i> Skill Statistics
+                    </div>
+                    <div class="">
+                        <canvas id="radar" class="chart chart-radar" data="value" labels="label" options ="options" style="padding: 10px;"></canvas> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

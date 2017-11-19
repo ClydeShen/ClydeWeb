@@ -1,0 +1,99 @@
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .portfolioHeader .title {
+        max-width: 545px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .portfolioHeader .title {
+        max-width: 100%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    body {
+        height: 100%;
+        background: url(../image/xs-bg.jpg);
+        background-size: initial;
+    
+}
+.xs-bg{    ;
+}
+
+}
+@media only screen and (max-width : 992px) and  (min-width : 768px){
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .portfolioHeader .title {
+        margin: 0;
+    }
+    .portfolioHeader .title h1{
+
+    }
+    .portfolioHeader .logo-xs{
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;    
+        margin-bottom: 0px;
+        margin-right: 15px;
+    }
+    .btn-white {
+        margin: 5px 5px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .portfolioHeader .title {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .portfolioHeader .logo-xs{
+        margin-right: 0px;
+    }
+}
+@media only screen and (max-width : 451px)
+{
+    .portfolioHeader{
+        height: 180px;
+
+    }
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .item {
+        margin: 15px 0px;
+    }
+
+
+}

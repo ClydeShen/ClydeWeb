@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<!-- This content is part of the following document: http://go.microsoft.com/fwlink/?LinkId=330004 -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> <!-- For IE on an intranet. -->
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <title>Three-Body Problem</title>
+        <script>
+            // Preload all images/bitmaps.
+            var preloadImages = [];
+            var preloadImagePaths = ["images/jupiter.jpg", "images/mercury.jpg", "images/moon.jpg", "images/starField.png", "images/starField_0.15.png"];
+
+            for (var i = 0; i < preloadImagePaths.length; i++) {
+                preloadImages[i] = new Image();
+
+                preloadImages[i].onerror = function () {
+                    if (console) {
+                        console.error(this.src + " error.");
+                    } // if
+                }; // onerror
+
+                preloadImages[i].src = preloadImagePaths[i]; // Preload images to improve perceived app speed.
+            } // for  
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Three-Body Problem</h1>
+        </header>
+        <section>
+            <form id="initialConditions">
+                <fieldset>
+                    <legend>Mass 1</legend>
+                    <table id="mass1">
+                        <tr>
+                            <td>mass:</td>
+                            <td><input id="m1_mass" type="number" value="1E19" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>x-position:</td>
+                            <td><input id="m1_position_x" type="number" value="0" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>y-position:</td>
+                            <td><input id="m1_position_y" type="number" value="0" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>x-velocity:</td>
+                            <td><input id="m1_velocity_x" type="number" value="0" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>y-velocity:</td>
+                            <td><input id="m1_velocity_y" type="number" value="2" required="required" /></td>
+                        </tr>
+                        <tr style="">
+                            <td>bitmap:</td>
+                            <td><input type="text" value="images/jupiter.jpg" required="required" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>Mass 2</legend>
+                    <table id="mass2">
+                        <tr>
+                            <td>mass:</td>
+                            <td><input type="number" value="1E18" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>x-position:</td>
+                            <td><input type="number" value="200" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>y-position:</td>
+                            <td><input type="number" value="0" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>x-velocity:</td>
+                            <td><input type="number" value="0" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>y-velocity:</td>
+                            <td><input type="number" value="900" required="required" /></td>
+                        </tr>
+                        <tr style="">
+                            <td>bitmap:</td>
+                            <td><input type="text" value="images/mercury.jpg" required="required" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>Mass 3</legend>
+                    <table id="mass3">
+                        <tr>
+                            <td>mass:</td>
+                            <td><input type="number" value="1E18" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>x-position:</td>
+                            <td><input type="number" value="-200" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>y-position:</td>
+                            <td><input type="number" value="0" required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>x-velocity:</td>
+                            <td><input type="number" value="0"  required="required" /></td>
+                        </tr>
+                        <tr>
+                            <td>y-velocity:</td>
+                            <td><input type="number" value="-900" required="required" /></td>
+                        </tr>
+                        <tr style="">
+                            <td>bitmap:</td>
+                            <td><input type="text" value="images/moon.jpg" required="required" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <button id="submitButton">Submit</button>
+                <button id="reloadButton">Reload</button>
+                <button id="infoButton">Info</button>
+            </form>
+            <div id="WebGLCanvasElementContainer">
+                <!-- Three.js will add a canvas element to the DOM here. -->
+                <!-- The following <article> element (along with its content) will be removed via JavaScript just before the simulation starts: -->
+            </div>
+        </section>
+        <script src="https://dl.dropboxusercontent.com/u/3587259/Code/Threejs/three.min.js"></script>
+        <script src="https://dl.dropboxusercontent.com/u/3587259/Code/Threejs/OrbitControls.js"></script>
+        <!--<script src="https://rawgithub.com/mrdoob/three.js/master/build/three.js"></script>  The "CDN" for Three.js  -->
+        <!--<script src="https://rawgithub.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>  Allows for orbiting, panning, and zooming. -->
+        <script src="js/test.js" type="text/javascript"></script>
+    </body>
+</html>

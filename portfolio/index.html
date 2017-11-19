@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.85, user-scalable = yes"> 
+        <title>Longzhen Shen >> Portfolio</title>
+        <meta name="description" content="Clyde personal website, created by 申龙臻 Clyde Shen">
+        <meta name="author" content="Clyde Shen 申龙臻">
+		<meta name="keywords" content="Clyde Shen, 申龙臻, Longzhen Shen" />
+		<meta name="copyright" content="Copyright (c) 2015-2017. Clyde Shen All Rights Reserved." />
+        <link rel="shortcut icon" href="image/logo.ico"> 
+        <!--<link rel="stylesheet" type="text/css" href="css/default.css" />-->
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/portfolio.css" rel="stylesheet" type="text/css"/>
+        <link href="css/component.css" rel="stylesheet" type="text/css"/>
+        <link href="css/isotope.css" rel="stylesheet" type="text/css"/>
+        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
+
+        <script src="../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/jquery.isotope.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mb.YTPlayer.min.js" type="text/javascript"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/Chart.min.js" type="text/javascript"></script>
+
+        <script>
+            jQuery(function () {
+                jQuery(".player").mb_YTPlayer();
+            });
+            $(window).ready(function () {
+                var $container = $('.portfolioContainer');
+                $container.isotope({
+                    filter: '*',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'ease'
+                    }
+                });
+
+                $('.portfolioFilter a').click(function () {
+                    $('.portfolioFilter .current').removeClass('current');
+                    $(this).addClass('current');
+
+                    var selector = $(this).attr('data-filter');
+                    $container.isotope({
+                        filter: selector,
+                        animationOptions: {
+                            duration: 750,
+                            easing: 'ease'
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="player" data-property="{videoURL:'6D-A6CL3Pv8',containment:'body',autoPlay:true, mute:true, startAt:5, stopAt: 257,showControls: false,showAnnotations: false,opacity:1}"></div>
+        <div class="container portfolio">
+            <div class="xs-bg"></div>
+            <div class="portfolioHeader">
+                <div class="hidden-xs col-sm-2 col-md-3 logo pull-left"></div>
+                <div class="col-xs-12 col-md-9 title pull-left">
+                    <!--<div class="hidden-sm hidden-md hidden-lg logo-xs pull-left"></div>-->
+                    <h1><span class="hidden-sm hidden-md hidden-lg logo-xs-pic"></span>PROJECTS</h1>
+                    <p class="">Below you will find a handful of my work that I've accomplished over <a class="" href="timeline.html" target="_blank">the past few years</a>.</p>
+                </div>
+                <span class="pull-right" id ="more-link">
+                    <a href="http://dever.nz">Dever</a>
+                    |
+                    <a href="http://shenlongzhen.com/portfolio/timeline.html">Timeline</a>
+                </span>
+            </div>
+            <div class="portfolioFilter ">
+                <a href="#" class="current btn btn-white" data-filter="*" >All Categories</a>
+                <a href="#" class="btn btn-white" data-filter=".tangren">Tangren</a>
+                <a href="#" class="btn btn-white" data-filter=".central">Central Station Software</a>
+                <a href="#" class="btn btn-white" data-filter=".anns">Ann's</a>
+                <a href="#" class="btn btn-white" data-filter=".app">Apps</a>
+            </div>
+            <div class="portfolioContainer col-xs-12 noPadding">
+                <div class="item tangren">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/eckom.jpg) no-repeat;  background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Eckom</h3>
+                            <span>Clyde Shen</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="eckom">Take a look</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item tangren">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/yyfood.jpg) no-repeat;  background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Y&Y Frozen Food | Supplier</h3>
+                            <span>Clyde Shen</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="yyfood">Take a look</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item tangren">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/kingdom.jpg) no-repeat;  background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Kingdom Tour</h3>
+                            <span>Clyde Shen</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="kindom">Take a look</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item anns">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/anns.jpg) no-repeat;background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Ann’s Volcanic (old)</h3>
+                            <span>Clyde Shen</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="oldanns">Take a look</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item app">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/app.png) no-repeat;  background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Resume App</h3>
+                            <span>Clyde Shen</span>
+                            <a id="webVersion" href="#" data-toggle="modal" data-target="#showModal">Web Version</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item anns">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/Hellopets.jpg) no-repeat;background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Hello Pets</h3>
+                            <span>Clyde Shen</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="hellopet">Take a look</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item central">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/aimyplus.jpg) no-repeat;background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Aimy Plus</h3>
+                            <span>Central Station Software</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="aimy">Take a look</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item anns">
+                    <div class="figure eachItem ">
+                        <div class="figureImg" style="background: url(image/annv2.png) no-repeat;background-size: cover;background-position: top;"></div>
+                        <div class="figcaption">
+                            <h3>Ann’s Volcanic (new)</h3>
+                            <span>Clyde Shen</span>
+                            <a href="#" data-toggle="modal" data-target="#normalModal" data-name="newanns">Take a look</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div><!--portfolioContainer-->
+        </div> <!--container -->
+        <!-- Modal -->
+        <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content mobile-content">
+                    <div class="modal-body mobile-body">
+                        <iframe id="appView" frameborder="0" src=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="normalModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content normal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-12 col-sm-6" id="demoImage">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel " data-interval="false">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators" id="carousel-indicators">
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" id="carousel-inner">
+                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6" id="demoText">
+                            <h2 id="demoTitel"></h2>
+                            <hr>
+                            <div>
+                                <p id="demoDes"></p>
+                            </div>
+                            <div class="demoLinkPart">
+                                <a class="btn btn-white pull-right" id="quicklink" href="#" target="_blank">Link</a>
+                                <canvas id="canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+
+            var frameSrc = "http://shenlongzhen.com/portfolio/app/webview/";
+            $('#showModal').on('show.bs.modal', function () {
+                $('#appView').attr("src", frameSrc);
+            });
+
+            var json = getModelData();
+            var name = "";
+            $('a[data-target="#normalModal"]').on('click', function (e)
+            {
+                name = this.dataset.name;
+                var data = json.responseJSON;
+                var obj = data[name];
+                $("#normalModal").carousel("pause").removeData();
+                var content_indi = "";
+                var content_inner = "";
+                $.each(obj.url, function (i, v) {
+                    content_indi += ' <li data-target="#carousel-example-generic" data-slide-to="' + i + '" class=""></li>';
+                    content_inner += ' <div class="item itemImg"><img class="img-responsive" src="' + v + '"></div>';
+                });
+                $('#carousel-indicators').html(content_indi);
+                $('#carousel-inner').html(content_inner);
+                $('#carousel-indicators > li').first().addClass('active');
+                $('#carousel-inner .item').first().addClass('active');
+                $('#normalModal').carousel();
+                $('#demoTitel').html(obj.title);
+                $('#demoDes').html(obj.des);
+
+                var content_list = "";
+                $.each(obj.skill, function (i, v) {
+                    content_list += '<li>' + i + '\t' + v + '</li>';
+                });
+                $('#skills').html(content_list);
+                $("#quicklink").attr("href", obj.link);
+            });
+
+            function getModelData()
+            {
+                return $.ajax({
+                    type: 'GET',
+                    url: "image/images.json",
+                    async: false
+                });
+            }
+            var chart;
+            $('#normalModal').on('shown.bs.modal', function (event) {
+                var modal = $(this);
+                var canvas = modal.find('.modal-body canvas');
+                var ctx = canvas[0].getContext("2d");
+                var data = json.responseJSON;
+                var obj = data[name];
+                var label = [],
+                        values = [];
+
+                $.each(obj.skill, function (i, v) {
+                    label.push(i);
+                    values.push(v);
+                });
+                chart = new Chart(ctx).Bar({
+                    responsive: true,
+                    labels: label,
+                    datasets: [{
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,0.8)",
+                            highlightFill: "rgba(151,187,205,0.75)",
+                            highlightStroke: "rgba(151,187,205,1)",
+                            data: values
+                        }]
+                }, {});
+            }).on('hidden.bs.modal', function (event) {
+                var modal = $(this);
+                chart.clear();
+                chart.destroy();
+                var canvas = modal.find('.modal-body canvas');
+                canvas.attr('id', 'canvas');
+                $(this).data('bs.modal', null);
+            });
+
+        </script> 
+
+
+
+    </body>
+</html>

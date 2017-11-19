@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll; /* There's an issue with the scrollbar "randomly" appearing - this just keeps it always visible in case the user is using a very wide and narrow monitor. */
+}
+
+body {
+    width: 1024px; /* Currently, most screens can handle this. */
+    margin: auto; /* Center the page content. */
+    background-color: #777;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Start screen font. */
+}
+
+header {
+    color: #FFF;
+    text-shadow: 5px 5px 10px #333;
+}
+
+section {
+    position: relative; /* Float children relative to this element. */
+}
+
+section form {
+    width: 210px; /* This is a bit less than the "section #WebGLCanvasElementContainer margin-left" value to provide a nice space between the form and the viewport. */
+    float: left;
+    text-align: center; /* Center the button elements. */
+}
+
+section form fieldset {
+    text-align: left; /* Undo the button center aligning trick for the text in the form. */
+    margin-bottom: 1.25em; /* Adjust this so that the height of the form is about the same height as the WebGL Three.js viewport element. */
+}
+
+section form fieldset input {
+    width: 100%;
+}
+
+section form td {
+    white-space: nowrap; /* Don't let words like "x-position" break at the hyphen (which occurs in Chrome). */
+}
+
+section #WebGLCanvasElementContainer {
+    border: 1px solid #DDD; /* Match the native color of the fieldset border. */
+    width: 800px; /* The assumed fixed width of the WebGL Three.js viewport element. */
+    height: 600px; /* The assumed fixed height of the WebGL Three.js viewport element. */
+    margin-left: 224px; /* This is "body width" minus "section #WebGLCanvasElementContainer width" or 1024px - 800px = 224px. */
+    background-image: url('../images/starField_0.15.png'); /* 0.15 opacity value. */
+}
+
+section article {
+    padding: 0 1em;
+    color: white;
+}
+
+section button {
+    width: 4.5em;
+}

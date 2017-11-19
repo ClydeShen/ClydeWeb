@@ -1,0 +1,42 @@
+<ion-view view-title="Detail">
+    <ion-nav-bar class="bar-stable headerbar">
+        <ion-nav-back-button class="headerleftbtn"></ion-nav-back-button>
+    </ion-nav-bar>
+
+
+    <ion-content class="padding-left padding-right has-footer">
+        <div class="card noBackground" ng-repeat="exp in experience | filter :{
+                    shortname : whichExp
+                }">
+            <div class="item item-icon-left item-divider" >
+                <h2><i class="icon ion-code-working"></i>{{exp.title}}</h2>
+                <p>{{exp.employer}}</p>
+            </div>
+            <div class="item item-text-wrap" ng-click="toggleGroup(exp.list)">
+                <p>
+                    {{exp.description}}
+                </p>
+                <h2 class="btn-collapse"><i class="icon ion-ios-arrow-down"></i></h2>
+            </div>
+            <ion-item class="item-accordion item-text-wrap"  ng-show="isGroupShown(exp.list)">
+                <ul>
+                    <li class="row" ng-repeat="ele in exp.list">
+                        <div class="col-10"><i class="icon ion-android-checkbox-outline"></i></div>
+                        <div class="col-90 list-text-align"> {{ ele }} </div>
+                    </li>
+                </ul>
+            </ion-item>
+            <ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown(exp.list) && exp.demo.length !=0">
+                <ul>
+                    <li class="row" ng-repeat="de in exp.demo">
+                        <div class="col-10"><i class="icon ion-paper-airplane"></i></div>
+                        <div class="col-90 demolink"> <a href="#" ng-click="openLinkSys('http://{{de}}')">{{ de }}</a> </div>
+                    </li>
+                </ul>
+            </ion-item>
+            <div class="item item-divider item-icon-right" style="text-align: center">
+                {{exp.time}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

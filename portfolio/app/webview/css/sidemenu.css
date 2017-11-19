@@ -1,0 +1,45 @@
+.leftmenu .bar-header
+{
+    background: transparent;
+}
+.leftmenu .bar-header .title{
+    color: white;
+    font-weight: lighter;
+}
+.leftmenu .list
+{
+    background: transparent;
+    
+}
+.leftmenu .list .item
+{
+    background: rgba(255, 255, 255, 0.2);
+    
+    border: none;
+    color: snow;
+    font-weight: lighter;
+}
+.leftmenu .list .summary
+{
+}
+.leftmenu .list .summary h2
+{
+    color: white;
+    font-weight: bold;
+}
+.leftmenu .list .summary h3
+{
+    color: snow;
+    font-weight: lighter;
+}
+.leftmenu .list .item-divider
+{
+    color: gainsboro;
+    
+    font-weight: 400;
+}
+.leftmenu .list .item a
+{
+    background: transparent;
+    
+}
